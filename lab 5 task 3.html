@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<button id="b1" onclick="generateTable()"> Generate Table</button>
+<br>
+<br>
+
+<button id="b2" onclick="power()"> Calculate Power</button>
+<br>
+<br>
+
+<button id="b3" onclick="sequence()"> Generate Sequence</button>
+<br>
+<br>
+
+<button id="b4" onclick="ssequence()"> Generate Even/Odd Sequence</button>
+<br>
+<br>
+
+<strong>Result : </strong>
+
+<p id="p1"></p>
+
+<script>
+
+function generateTable() {
+	 document.getElementById("p1").innerHTML ="";
+  
+  const number = parseInt(prompt('Enter an integer: '));
+
+//creating a multiplication table
+for(let i = 1; i <= 10; i++) {
+
+    // multiply i with number
+    const result = i * number;
+
+    // display the result
+    console.log(`${number} * ${i} = ${result}`);
+
+    document.getElementById("p1").innerHTML += (`<br>${number} * ${i} = ${result}<br>` );
+
+    
+}
+
+}
+
+function power() {
+	 document.getElementById("p1").innerHTML ="";
+ document.getElementById("p1").innerHTML = Math.pow(parseInt(prompt('Enter an integer whose value you want to Calculate')), parseInt(prompt('Enter power of that integer')));
+
+}
+
+function sequence() {
+	 document.getElementById("p1").innerHTML ="";
+var limit = parseInt(prompt('Enter the limit for sequence'));
+
+	 for(let i = 0; i <= limit; i++) {
+
+    // multiply i with number
+    const result = i;
+
+    document.getElementById("p1").innerHTML += (`${result} ` );
+
+    
+}
+ 
+}
+
+
+function ssequence() {
+
+	 document.getElementById("p1").innerHTML ="";
+	
+	 var choice =prompt('Enter your choice Even/Odd????');
+
+     var limit = parseInt(prompt('Enter the limit for sequence'));
+
+   if(choice==='Odd' || choice==='odd' )
+    {
+    	
+	document.getElementById("p1").innerHTML += (`0 ` );
+  
+	 for(let i = 1; i <= limit; i+=2) {
+
+
+    document.getElementById("p1").innerHTML += (`${i} ` );
+
+    
+}
+}
+else if(choice==='Even' || choice==='even' )
+{
+	document.getElementById("p1").innerHTML += (`0 ` );
+
+	 for(let i = 2; i <= limit; i+=2) {
+
+
+    document.getElementById("p1").innerHTML += (`${i} ` );
+
+ }   
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
